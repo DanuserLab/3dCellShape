@@ -1,9 +1,10 @@
 # 3dCellShape
-3dCellShape implements measurement and analysis of geometric features on extracted 3D volumes of single cells from fluorescent imaging data. 
-![Alt Text](doc/readme_pic.tif?raw=true)
+3dCellShape implements measurement and analysis of geometric features on extracted 3D volumes of single cells from fluorescent imaging data.
+
+![Alt Text](doc/readme_pic.jpg?raw=true)
 
 ## Related paper
-- This repository is for initial distribution of the 3D shape analysis pipeline associated with the manuscript ["In vivo profiling of site-specific human cancer cell states in zebrafish"](https://doi.org/10.1101/2021.06.09.447621), on BioRxiv. 
+- This repository is for initial distribution of the 3D shape analysis pipeline associated with the manuscript [**"In vivo profiling of site-specific human cancer cell states in zebrafish"**](https://doi.org/10.1101/2021.06.09.447621), on BioRxiv. 
 
 ## Accessing the codes and example output
 - The pipeline consists of three Matlab scripts – (1) for post-processing and (2) segmentation of data, adapted from [Driscoll, et al, 2019](https://www.nature.com/articles/s41592-019-0539-z), and (3) for geometric feature extraction and analysis from extracted 3D volumes. 
