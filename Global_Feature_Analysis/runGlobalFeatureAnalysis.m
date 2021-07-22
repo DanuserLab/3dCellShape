@@ -1,13 +1,14 @@
 %% Set directory 
-saveDirectory = '/project/bioinformatics/Danuser_lab/zebrafish/analysis/Dagan/Voodoo_analysis/20201002_CroptoLoc/segmentation'; % directory for the analysis output
-cellList=[1 2 3];
+saveDirectory = '/project/bioinformatics/Danuser_lab/zebrafish/analysis/Dagan/scripts/GitHub_3dCellShape/exampleCroppedCells/new_examples/segmentation'; % directory for the analysis input
+cellList=[5, 11, 12, 13, 16, 42, 43, 46, 47, 55];
 
 %% Calculate the global geometry feature
+fn='threshold1.tif';
 for n=1:length(cellList)
     %load the segmented image
     image3D=load3DImage([saveDirectory '/Cell' num2str(cellList(n)) '/thresholded'],fn);
     %set directory for each cell
-    saveCellPath=[saveDirectory '/Cell' num2str(cellList(ii)) '/GlobalMorphology'];
+    saveCellPath=[saveDirectory '/Cell' num2str(cellList(n)) '/GlobalMorphology'];
     if ~isfolder(saveCellPath)
         mkdir(saveCellPath) 
     end
@@ -23,7 +24,7 @@ end
 %% Statistical analysis for evaluation
 % create a matrix of a list of cells and desired features
 %read the expertimental codition from xlsx file
-xlsxPath='/home2/s193094/matlab/HaniehAdded/Main/globalGeoFeatures/Paper';
+xlsxPath='/project/bioinformatics/Danuser_lab/zebrafish/analysis/Hanieh/Voodoo_analysis/morphology_croppedcells/200123_organized/smoothImageScale3/Scripts/Paper';
 sheet='Sheet1';
 [NumData, StrData]=xlsread(fullfile(xlsxPath, 'CellTable.xlsx'),sheet);
 
