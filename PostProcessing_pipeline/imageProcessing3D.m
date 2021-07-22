@@ -16,9 +16,9 @@
 
 clc; clear;
 
-imagePath = '/project/bioinformatics/Danuser_lab/zebrafish/analysis/Dagan/scripts/GitHub_3dCellShape/exampleCroppedCells' %path to your data here
+imagePath = '/project/bioinformatics/Danuser_lab/zebrafish/analysis/Dagan/scripts/GitHub_3dCellShape/exampleCroppedCells/new_examples' %path to your data here
 Cell_name= 'Cell'; % e.g. Cell or Shear_Cell
-Cell_index= [54, 458, 607]; % specify the cell index wish to be processed
+Cell_index= [5, 11, 12, 13, 16, 42, 43, 46, 47, 55]; % specify the cell index wish to be processed
 ChannelstoProcess= [1]; % specify the channels wish to be processed, start from 0, i.e. CH00
 timepoint= []; % specify the timepoint wish to be processed, leave it blank if you want to process all time points.
 
@@ -106,17 +106,17 @@ end
 MIJ.exit
 disp('All Done')
 
-%% This section applies we applied deconvolution to all images prior to 
+%% This section applies deconvolution to all images prior to 
 %segmentation, using blind deconvolution with a synthesized PSF with 
 %10 iterations.
-imagePath = '/project/bioinformatics/Danuser_lab/zebrafish/analysis/Dagan/scripts/GitHub_3dCellShape/exampleCroppedCells' %path to your data here
+imagePath = '/project/bioinformatics/Danuser_lab/zebrafish/analysis/Dagan/scripts/GitHub_3dCellShape/exampleCroppedCells/new_examples' %path to your data here
 Cell_name= 'driftcorrect_Cell'; % e.g. Cell or Shear_Cell
-Cell_index= [54, 458, 607]; % specify the cell index wish to be processed
+Cell_index= [5, 11, 12, 13, 16, 42, 43, 46, 47, 55]; % specify the cell index wish to be processed
 ChannelstoProcess= [1]; % specify the channels wish to be processed, start from 0, i.e. CH00
 timepoint= []; % specify the timepoint wish to be processed, leave it blank if you want to process all time points.
 psfPath= '/project/bioinformatics/Danuser_lab/zebrafish/analysis/Dagan/scripts/GitHub_3dCellShape';
-psf {1}= 'Cell38_AvePsf_crop_z300nm.tif'; % This is a synthesized PSF optimized for the example data. Each microscope will require a different psf for deconvolution.
-psf {2}= 'Cell38_AvePsf_crop_z300nm.tif';
+psf {1}= 'Example_PSF.tif'; % This is a synthesized PSF optimized for the example data. Each microscope will require a different psf for deconvolution.
+psf {2}= 'Example_PSF.tif';
 
 
 background= 170; % measure the background in the PSF data

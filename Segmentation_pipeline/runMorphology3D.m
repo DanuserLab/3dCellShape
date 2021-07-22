@@ -1,6 +1,6 @@
 %% Set directories
-imageDirectory = '/project/bioinformatics/Danuser_lab/zebrafish/analysis/Dagan/Voodoo_analysis/20201002_CroptoLoc/organized_raw'; % directory the image is in. The images to be analyzed should be the only thing in the directory.
-saveDirectory = '/project/bioinformatics/Danuser_lab/zebrafish/analysis/Dagan/Voodoo_analysis/20201002_CroptoLoc/segmentation'; % directory for the analysis output
+imageDirectory = '/project/bioinformatics/Danuser_lab/zebrafish/analysis/Dagan/scripts/GitHub_3dCellShape/exampleCroppedCells/new_examples'; % directory the image is in. The images to be analyzed should be the only thing in the directory.
+saveDirectory = '/project/bioinformatics/Danuser_lab/zebrafish/analysis/Dagan/scripts/GitHub_3dCellShape/exampleCroppedCells/new_examples/segmentation'; % directory for the analysis output
 
 
 %% Set movie parameters
@@ -49,7 +49,7 @@ p.control.intensity=0;
 p.control.intensityBlebCompare=0;
  
 %% Analyze kras cells
-imageList = [7,8,14,16:19,23:26,29,30];
+imageList = [5, 11, 12, 13, 16, 42, 43, 46, 47, 55]; %change these numbers to the relevant cell number
 parfor c = 1:length(imageList) % can be made a parfor loop if sufficient RAM is available.
     disp(['--------- Analysing Cell ' num2str(imageList(c))])
     
