@@ -1,12 +1,12 @@
 %% Set directories
-imageDirectory = '/project/bioinformatics/Danuser_lab/zebrafish/analysis/Dagan/scripts/GitHub_3dCellShape/exampleCroppedCells/new_examples'; % directory the image is in. The images to be analyzed should be the only thing in the directory.
+imageDirectory = '/project/bioinformatics/Danuser_lab/zebrafish/analysis/Dagan/scripts/GitHub_3dCellShape/exampleCroppedCells/new_examples'; % directory the image is in. The images to be analyzed should be the only thing in the directory(plus the index file).
 saveDirectory = '/project/bioinformatics/Danuser_lab/zebrafish/analysis/Dagan/scripts/GitHub_3dCellShape/exampleCroppedCells/new_examples/segmentation'; % directory for the analysis output
 
 
 %% Set movie parameters
-pixelSizeXY = 104; 
-pixelSizeZ = 300;
-timeInterval = 60; 
+pixelSizeXY = 104; % in nano
+pixelSizeZ = 300; % in nano
+timeInterval = 1; % it is meaningful for live-cell imaging 
 
 
 %% Turn processes on and off
@@ -49,13 +49,13 @@ p.control.intensity=0;
 p.control.intensityBlebCompare=0;
  
 %% Analyze kras cells
-imageList = [5, 11, 12, 13, 16, 42, 43, 46, 47, 55]; %change these numbers to the relevant cell number
+imageList = [91]; %change these numbers to the relevant cell number
 parfor c = 1:length(imageList) % can be made a parfor loop if sufficient RAM is available.
     disp(['--------- Analysing Cell ' num2str(imageList(c))])
     
     % load the movie
     if ~isfolder(saveDirectory), mkdir(saveDirectory); end
-    imagePathCell = fullfile(imageDirectory,['Cell' num2str(imageList(c))]);
+    imagePathCell = fullfile(imageDirectory,['DoubleBlind_driftcorrect_Cell' num2str(imageList(c))]);
     savePathCell = fullfile(saveDirectory, ['Cell' num2str(imageList(c))]);
     MD = makeMovieDataOneChannel(imagePathCell, savePathCell, pixelSizeXY, pixelSizeZ, timeInterval);
 

@@ -2,8 +2,8 @@ function [dist1 dist2]=createSubDists(totalDist,cellLabel,ExpCond)
 %createSubDists creates two distributions from the total dataset
 
 %find the index of cells in statistical matrix
-Ind1=strfind(cellLabel,ExpCond{1});
-Ind2=strfind(cellLabel,ExpCond{2});
+Ind1=find(ismember(cellLabel,ExpCond{1}));
+Ind2=find(ismember(cellLabel,ExpCond{2}));
 
 dist1=totalDist(Ind1,1:2);
 dist2=totalDist(Ind2,1:2);

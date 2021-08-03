@@ -83,8 +83,8 @@ else
     RadiusSphericity=(globalGeoFeature.EquivDiameter/2)/CirumscribedSphere.radius;
     globalGeoFeature.RadiusSphericity=RadiusSphericity;
     
-    RatioSpehricity=InscribedSphere.radius/CirumscribedSphere.radius;
-    globalGeoFeature.RatioSpehricity=RatioSpehricity;
+    RatioSphericity=InscribedSphere.radius/CirumscribedSphere.radius;
+    globalGeoFeature.RatioSphericity=RatioSphericity;
 
 end
 %reduce the size of Image
