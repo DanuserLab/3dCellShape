@@ -4,7 +4,7 @@
 ![Alt Text](doc/readme_pic.jpg?raw=true)
 
 ## Related paper
-- This repository is for initial distribution of the 3D shape analysis pipeline associated with the manuscript [**"In vivo profiling of site-specific human cancer cell states in zebrafish"**](https://doi.org/10.1101/2021.06.09.447621), on BioRxiv. 
+- This repository is for initial distribution of the 3D shape analysis pipeline associated with the manuscript [**In vivo 3D profiling of site-specific human cancer cell morphotypes in zebrafish**](https://doi.org/10.1083/jcb.202109100), *JCB*, 2022, 221 (11): e202109100, written by Dagan Segal, Hanieh Mazloom-Farsibaf, Bo-Jui Chang, Philippe Roudot, Divya Rajendran, Stephan Daetwyler, Reto Fiolka, Mikako Warren, James F. Amatruda, [Gaudenz Danuser](https://www.danuserlab-utsw.org/).
 
 ## Accessing the codes and example output
 - The pipeline consists of three Matlab scripts – (1) for post-processing and (2) segmentation of data, adapted from [Driscoll, et al, 2019](https://www.nature.com/articles/s41592-019-0539-z), and (3) for geometric feature extraction and analysis from extracted 3D volumes. 
@@ -15,3 +15,8 @@
 	- ii.	(Part 2) and segmentation of cell volumes by running **runMorphology3D.m**. The subfunctions for this script are included in the Segmentation_pipeline folder. 
 	- iii.	(Part 3) Run **runGlobalFeatureAnalysis.m** to measure geometric features of cells from 3D segmented data, create an indexed table of geometric features, and create some basic visualizations of data. This script is found under the Global_Feature_Analysis folder. 
 - Pipeline built on MATLAB R2020a version
+
+## Danuser Lab Links
+[Danuser Lab Website](https://www.danuserlab-utsw.org/)
+
+[Software Links](https://github.com/DanuserLab/)
